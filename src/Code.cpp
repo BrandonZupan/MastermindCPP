@@ -13,7 +13,7 @@ Code::Code(std::string code) {
         this->code = code;
     }
     else {
-        std::cout << "invalid code" << std::endl;
+        this-> code = "";
     }
 }
 

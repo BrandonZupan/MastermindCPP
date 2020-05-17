@@ -12,9 +12,10 @@
 void testCodeCreation();
 
 int main(int argc, char *argv[]) {
-    std::cout << "hello world" << std::endl; 
+    std::cout << "Welcome to Mastermind." << std::endl; 
     
     Game game = Game(true);
+    game.runGame();
     
     #ifdef TEST
 

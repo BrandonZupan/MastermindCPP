@@ -8,12 +8,18 @@
 
 #define BOARD_SIZE 12
 
+
 class Game {
 
 private:
     Code secretCode;
-
     Code gameboard[BOARD_SIZE];
+
+    int remainingGuesses;
+
+    // Ask users for a guess
+    // Returns a code if it was valid, or null if it wasn't
+    Code promptGuess();
 
 public:
     // Default constructor
@@ -23,6 +29,9 @@ public:
     // Constructor with debug param
     // If true, starts game in debug mode
     Game(bool debug);
+
+    // Starts the game
+    void runGame();
 
 };
 
