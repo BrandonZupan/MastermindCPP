@@ -15,11 +15,16 @@ Code::Code(std::string code) {
 
 bool Code::isValidCode(std::string code) {
     for (int i = 0; i < code.size(); i++) {
+    bool inColors = false;
         // Check if it be in COLORS
         for (int j = 0; j < sizeof(COLORS); j++) {
-            if (code[i] != COLORS[j]) {
-                return false;
+            if (code[i] == COLORS[j]) {
+                inColors = true;
+                break;
             }
+        }
+        if (inColors == false) {
+            return false;
         }
     }
     return true;
