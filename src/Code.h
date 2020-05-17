@@ -6,6 +6,8 @@
 
 #include <string>
 
+#define CODE_LENGTH 4
+
 class Code {
 
 private:

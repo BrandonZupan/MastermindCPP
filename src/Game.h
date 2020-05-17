@@ -6,6 +6,8 @@
 
 class Game {
 
+private:
+
 public:
     // Default constructor
     // Creates a Game with debug mode set to false

@@ -14,6 +14,9 @@ Code::Code(std::string code) {
 }
 
 bool Code::isValidCode(std::string code) {
+    if (code.size() != CODE_LENGTH) {
+        return false;
+    }
     for (int i = 0; i < code.size(); i++) {
     bool inColors = false;
         // Check if it be in COLORS
