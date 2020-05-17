@@ -15,19 +15,20 @@ private:
     std::string code;
 
     // Checks if a code is valid
-    bool isValidCode(std::string code);
+    static bool isValidCode(std::string code);
     
 public:
     // Constructor with string of code
     // Checks if the string is valid and applies it
     Code(std::string code);
 
-    /* FUNCTION - int getCode
-     * returns the string code that is stored
-
-    */
-
+    // Returns the code value
     std::string getCode() {
+        return code;
+    }
+
+    // Returns code as a string
+    std::string toString() {
         return code;
     }
 
