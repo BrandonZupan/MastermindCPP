@@ -5,12 +5,10 @@
 #include <cstdlib>
 #include <iostream>
 
-using namespace std;
-
 Game::Game() {
     Game(false);
 };
 
 Game::Game(bool debug) {
-    cout << "new game created" << endl;
+    std::cout << "new game created" << std::endl;
 };
