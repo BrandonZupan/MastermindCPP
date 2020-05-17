@@ -12,8 +12,8 @@ driver: Driver.cpp
 game: Game.cpp
 	$(CC) -c Game.cpp
 
-code: Code.cpp
-	$(CC) -c Code.cpp
+code: Code.cpp Guess.cpp
+	$(CC) -c Code.cpp Guess.cpp
 
 .PHONY: clean
 
