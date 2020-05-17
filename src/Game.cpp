@@ -13,8 +13,7 @@ Game::Game() {
 };
 
 Game::Game(bool debug) {
-    std::string code = "BGOP";
-    this.secretCode = Code(code);
+    this->secretCode = Code("BGOP");
     if (debug) {
         std::cout << "Secret code: " + secretCode.toString() << std::endl;
     }

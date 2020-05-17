@@ -4,6 +4,10 @@
 #include "Code.h"
 #include <iostream>
 
+Code::Code() {
+    Code("BBBB");
+}
+
 Code::Code(std::string code) {
     if (isValidCode(code)) {
         this->code = code;
@@ -13,7 +17,7 @@ Code::Code(std::string code) {
     }
 }
 
-static bool Code::isValidCode(std::string code) {
+bool Code::isValidCode(std::string code) {
     if (code.size() != CODE_LENGTH) {
         return false;
     }

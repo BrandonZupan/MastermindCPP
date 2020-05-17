@@ -11,13 +11,16 @@
 class Code {
 
 private:
-    const char COLORS[6] = {'B', 'G', 'O', 'P', 'R', 'Y'};
+    char COLORS[6] = {'B', 'G', 'O', 'P', 'R', 'Y'};
     std::string code;
 
     // Checks if a code is valid
-    static bool isValidCode(std::string code);
+    bool isValidCode(std::string code);
     
 public:
+    // Default constructor
+    Code();
+
     // Constructor with string of code
     // Checks if the string is valid and applies it
     Code(std::string code);
