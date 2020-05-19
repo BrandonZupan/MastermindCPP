@@ -26,12 +26,12 @@ public:
     Code(std::string code);
 
     // Returns the code value
-    std::string getCode() {
+    std::string const getCode() {
         return code;
     }
 
     // Returns code as a string
-    std::string toString() {
+    std::string const toString() {
         return code;
     }
 
