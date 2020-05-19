@@ -13,12 +13,6 @@ private:
     int numBlack;
     int numWhite;
 
-    // Find the number of black pins
-    void calculateBlack();
-
-    // Find the number of white pins
-    void calculateWhite();
-
 public:
     // Default constructor
     Guess();
@@ -28,7 +22,7 @@ public:
     : Code(code) {}
 
     // Fill in the number of black and white pins
-    void setBlackAndWhite();
+    void setBlackAndWhite(std::string secretCode);
 };
 
 #endif
