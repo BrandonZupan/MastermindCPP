@@ -5,6 +5,7 @@
 #define GAME_H
 
 #include "Code.h"
+#include "Guess.h"
 
 #define BOARD_SIZE 12
 
@@ -19,7 +20,7 @@ private:
 
     // Ask users for a guess
     // Returns a code if it was valid, or null if it wasn't
-    Code promptGuess();
+    Guess promptGuess();
 
 public:
     // Default constructor

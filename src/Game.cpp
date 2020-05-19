@@ -28,7 +28,7 @@ void Game::runGame() {
     // Give resulting amount of black and white pegs
 
     while (remainingGuesses > 0) {
-        Code guess = promptGuess();
+        Guess guess = promptGuess();
         if (guess.getCode() == "") {
             std::cout << "INVALID_GUESS" << std::endl;
             continue;
@@ -38,12 +38,12 @@ void Game::runGame() {
     }
 };
 
-Code Game::promptGuess() {
+Guess Game::promptGuess() {
     std::cout << "You have " + std::to_string(remainingGuesses) + " guess(es) left." << std::endl;
     std::cout << "Enter guess: " << std::endl;
 
     std::string input;
     std::cin >> input;
 
-    return Code(input);
-}
+    return Guess(input);
+};

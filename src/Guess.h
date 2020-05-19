@@ -5,6 +5,8 @@
 #ifndef GUESS_H
 #define GUESS_H
 
+#include "Code.h"
+
 class Guess : public Code {
 
 private:
@@ -16,7 +18,8 @@ public:
     Guess();
 
     // Constructor with a string code
-    Guess(std::string code);
-}
+    Guess(std::string code)
+    : Code(code) {}
+};
 
 #endif
