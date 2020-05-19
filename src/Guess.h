@@ -13,11 +13,11 @@ private:
     int numBlack;
     int numWhite;
 
-    // Find and set the number of black pins
-    void setBlack();
+    // Find the number of black pins
+    void calculateBlack();
 
-    // Find and set the number of white pins
-    void setWhite();
+    // Find the number of white pins
+    void calculateWhite();
 
 public:
     // Default constructor
