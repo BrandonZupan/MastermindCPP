@@ -15,6 +15,7 @@ void Guess::setBlackAndWhite(Code secretCode) {
         for (int j = 0; j < getCode().size(); j++) {
             if (secretString[i] == getCode()[j]) {
                 numWhite++;
+                break;
             }
         }
         
@@ -29,7 +30,7 @@ void Guess::setBlackAndWhite(Code secretCode) {
     this->numBlack = numBlack;
 }
 
-void Guess::setBlack(Code secretCode) {
+int Guess::calculateBlack(Code secretCode) {
     int numBlack = 0;
 
     std::string secretString = secretCode.getCode();
@@ -38,8 +39,27 @@ void Guess::setBlack(Code secretCode) {
             numBlack++;
         }
     }
+    
+    return numBlack;
+}
 
-    this->numBlack = numBlack;
+int Guess::calculateWhite(Code secretCode) {
+    // For each possible letter see how many matching instances there are
+    int numWhite = 0;
+
+//    for (int i = 0; i < *secretCode.getColors().size; i++) {
+//        for (int j = 0; j < getCode().size(); j++) {
+//            if (*secretCode.getColors()[i] == getCode()[j]) {
+//                numWhite++;
+//            }
+//        }
+//    }
+    
+    std::string secretString = secretCode.getCode();
+    for (int i = 0; i < secretString.size(); i++) {
+    }
+
+    return numWhite;
 }
 
 std::ostream& operator << (std::ostream &out, const Guess &g) {

@@ -34,7 +34,8 @@ public:
     std::string toString() const{
         return code;
     }
-
+    
+//    const char* getColorsPointer() const{ return &COLORS; }
 };
 
 #endif

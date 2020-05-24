@@ -15,8 +15,12 @@ private:
     int numBlack;
     int numWhite;
 
-    // Finds and sets the number of black pins
-    void setBlack(Code secretCode);
+    // Finds number of black pins
+    int calculateBlack(Code secretCode);
+
+    // Finds number of white pins
+    // Does not take into account black pins
+    int calculateWhite(Code secretCode);
 
 public:
     // Default constructor
