@@ -37,7 +37,7 @@ void Game::runGame() {
         guess.setBlackAndWhite(this->getSecretCode());
         std::cout << guess << std::endl;
 
-        // gameboard[totalGuesses] = guess;
+        gameboard.push_back(guess);
 
         if (guess.isWinningGuess()) {
             std::cout << "You win!" << std::endl;
@@ -45,7 +45,6 @@ void Game::runGame() {
         }
 
         remainingGuesses--;
-        totalGuesses++;
     }
 };
 
@@ -66,7 +65,9 @@ Guess Game::promptGuess() {
 };
 
 void Game::printBoard() {
-    for (int i = 0; i < totalGuesses; i++) {
-        std::cout << gameboard[i] << std::endl;
+    for (int i = 0; i < gameboard.size(); i++) {
+        std::cout << gameboard.at(i) << std::endl;
     }
+
+    std::cout << std::endl;
 }

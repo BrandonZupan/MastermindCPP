@@ -4,6 +4,7 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <vector>
 #include "Code.h"
 #include "Guess.h"
 
@@ -14,9 +15,8 @@ class Game {
 
 private:
     Code secretCode;
-    Guess gameboard[BOARD_SIZE];
-
-    int totalGuesses = 0;
+    // Guess gameboard[BOARD_SIZE];
+    std::vector<Guess> gameboard;
 
     int remainingGuesses;
 
