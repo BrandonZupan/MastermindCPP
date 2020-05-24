@@ -15,6 +15,9 @@ private:
     int numBlack;
     int numWhite;
 
+    // Finds and sets the number of black pins
+    void setBlack(Code secretCode);
+
 public:
     // Default constructor
     Guess();

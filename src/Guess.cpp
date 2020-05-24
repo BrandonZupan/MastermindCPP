@@ -29,6 +29,19 @@ void Guess::setBlackAndWhite(Code secretCode) {
     this->numBlack = numBlack;
 }
 
+void Guess::setBlack(Code secretCode) {
+    int numBlack = 0;
+
+    std::string secretString = secretCode.getCode();
+    for (int i = 0; i < secretString.size(); i++) {
+        if (secretString[i] == getCode()[i]) {
+            numBlack++;
+        }
+    }
+
+    this->numBlack = numBlack;
+}
+
 std::ostream& operator << (std::ostream &out, const Guess &g) {
     // format of `XXXX -> xb_xw`
     out << g.getCode() << " -> " << g.getBlack() << "b_" << g.getWhite() << "w";
