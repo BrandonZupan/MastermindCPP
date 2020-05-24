@@ -15,17 +15,25 @@ class Game {
 
 private:
     Code secretCode;
-    // Guess gameboard[BOARD_SIZE];
     std::vector<Guess> gameboard;
 
     int remainingGuesses;
 
-    // Ask users for a guess
-    // Returns a code if it was valid, or null if it wasn't
-    Guess promptGuess();
+    bool isWin = false;
+
+    // Ask users for input
+    // Returns their input as string
+    std::string promptInput();
+
+    // Handles a user input
+    void handleInput(std::string input);
 
     // Print the board
     void printBoard();
+
+    // Handle a guess
+    // Returns true if it is a valid guess and false if it isn't
+    bool handleGuess(std::string input);
 
 public:
     // Default constructor

@@ -28,28 +28,20 @@ void Game::runGame() {
     // Give resulting amount of black and white pegs
 
     while (remainingGuesses > 0) {
-        Guess guess = promptGuess();
-        if (guess.getCode() == "") {
-            std::cout << "INVALID_GUESS" << std::endl;
-            continue;
-        }
-        
-        guess.setBlackAndWhite(this->getSecretCode());
-        std::cout << guess << std::endl;
+        std::string input = promptInput();
+        handleInput(input); 
+    }
 
-        gameboard.push_back(guess);
-
-        if (guess.isWinningGuess()) {
-            std::cout << "You win!" << std::endl;
-            break;
-        }
-
-        remainingGuesses--;
+    if (isWin) {
+        std::cout << "You win!" << std::endl;
+    }
+    else {
+        std::cout << "You lose!" << std::endl;
     }
 };
 
 
-Guess Game::promptGuess() {
+std::string Game::promptInput() {
     std::cout << std::endl;
     std::cout << "You have " + std::to_string(remainingGuesses) + " guess(es) left." << std::endl;
     std::cout << "Enter guess: " << std::endl;
@@ -57,11 +49,7 @@ Guess Game::promptGuess() {
     std::string input;
     std::cin >> input;
 
-    if (input == "HISTORY") {
-        printBoard();
-    }
-
-    return Guess(input);
+    return input;
 };
 
 void Game::printBoard() {
@@ -70,4 +58,40 @@ void Game::printBoard() {
     }
 
     std::cout << std::endl;
+}
+
+void Game::handleInput(std::string input) {
+    if (input == "HISTORY") {
+        printBoard();
+    }
+    else if (input == "QUIT") {
+        remainingGuesses = 0;
+    }
+    else {
+        if (!handleGuess(input)) {
+            std::cout << "INVALID_GUESS" << std::endl;
+        }
+    }
+}
+
+bool Game::handleGuess(std::string input) {
+    Guess guess = Guess(input);
+    if (guess.getCode() == "") {
+        return false;
+    }
+    else {
+        guess.setBlackAndWhite(this->getSecretCode());
+        std::cout << guess << std::endl;
+
+        gameboard.push_back(guess);
+
+        if (guess.isWinningGuess()) {
+            isWin = true;
+            remainingGuesses = 0;
+            return true;
+        }
+
+        remainingGuesses--;
+        return true;
+    }
 }
