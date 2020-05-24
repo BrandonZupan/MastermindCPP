@@ -24,7 +24,7 @@ public:
     : Code(code) {}
 
     // Fill in the number of black and white pins
-    void setBlackAndWhite(std::string secretCode);
+    void setBlackAndWhite(Code secretCode);
 
     int getBlack() const { return numBlack; }
 

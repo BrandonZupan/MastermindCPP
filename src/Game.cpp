@@ -33,6 +33,10 @@ void Game::runGame() {
             std::cout << "INVALID_GUESS" << std::endl;
             continue;
         }
+        
+        guess.setBlackAndWhite(this->getSecretCode());
+
+        std::cout << guess << std::endl;
 
         remainingGuesses--;
     }

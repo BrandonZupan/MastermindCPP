@@ -34,6 +34,8 @@ public:
     // Starts the game
     void runGame();
 
+   Code getSecretCode() const { return secretCode; }
+
 };
 
 #endif
