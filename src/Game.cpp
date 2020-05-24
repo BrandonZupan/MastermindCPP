@@ -36,7 +36,7 @@ void Game::runGame() {
         std::cout << "You win!" << std::endl;
     }
     else {
-        std::cout << "You lose!" << std::endl;
+        std::cout << "You lose! The pattern was " << secretCode.getCode() << std::endl;
     }
 };
 
