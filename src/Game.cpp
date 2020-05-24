@@ -37,10 +37,15 @@ void Game::runGame() {
         guess.setBlackAndWhite(this->getSecretCode());
 
         std::cout << guess << std::endl;
+        if (guess.isWinningGuess()) {
+            std::cout << "You win!" << std::endl;
+            break;
+        }
 
         remainingGuesses--;
     }
 };
+
 
 Guess Game::promptGuess() {
     std::cout << "You have " + std::to_string(remainingGuesses) + " guess(es) left." << std::endl;

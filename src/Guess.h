@@ -36,6 +36,9 @@ public:
     int getBlack() const { return numBlack; }
 
     int getWhite() const { return numWhite; }
+
+    // Sees if the guess is a winning guess
+    bool isWinningGuess() { return (numBlack == getCode().size()); }
 };
 
 // ostream override
