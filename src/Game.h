@@ -14,13 +14,18 @@ class Game {
 
 private:
     Code secretCode;
-    Code gameboard[BOARD_SIZE];
+    Guess gameboard[BOARD_SIZE];
+
+    int totalGuesses = 0;
 
     int remainingGuesses;
 
     // Ask users for a guess
     // Returns a code if it was valid, or null if it wasn't
     Guess promptGuess();
+
+    // Print the board
+    void printBoard();
 
 public:
     // Default constructor

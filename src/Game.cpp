@@ -35,24 +35,38 @@ void Game::runGame() {
         }
         
         guess.setBlackAndWhite(this->getSecretCode());
-
         std::cout << guess << std::endl;
+
+        // gameboard[totalGuesses] = guess;
+
         if (guess.isWinningGuess()) {
             std::cout << "You win!" << std::endl;
             break;
         }
 
         remainingGuesses--;
+        totalGuesses++;
     }
 };
 
 
 Guess Game::promptGuess() {
+    std::cout << std::endl;
     std::cout << "You have " + std::to_string(remainingGuesses) + " guess(es) left." << std::endl;
     std::cout << "Enter guess: " << std::endl;
 
     std::string input;
     std::cin >> input;
 
+    if (input == "HISTORY") {
+        printBoard();
+    }
+
     return Guess(input);
 };
+
+void Game::printBoard() {
+    for (int i = 0; i < totalGuesses; i++) {
+        std::cout << gameboard[i] << std::endl;
+    }
+}
