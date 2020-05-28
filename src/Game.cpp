@@ -8,9 +8,7 @@
 
 // #include "Code.h"
 
-Game::Game() {
-    Game(false);
-};
+Game::Game() : Game(false) {} ;
 
 Game::Game(bool debug) {
     this->secretCode = Code("BGOP");

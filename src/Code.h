@@ -23,7 +23,7 @@ public:
 
     // Constructor with string of code
     // Checks if the string is valid and applies it
-    Code(std::string code);
+    explicit Code(std::string code);
 
     // Returns the code value
     std::string getCode() const{

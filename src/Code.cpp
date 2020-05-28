@@ -4,9 +4,7 @@
 #include "Code.h"
 #include <iostream>
 
-Code::Code() {
-    Code("BBBB");
-}
+Code::Code() : Code("BBBB") {} ;
 
 Code::Code(std::string code) {
     if (isValidCode(code)) {

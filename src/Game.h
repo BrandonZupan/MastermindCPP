@@ -42,7 +42,7 @@ public:
 
     // Constructor with debug param
     // If true, starts game in debug mode
-    Game(bool debug);
+    explicit Game(bool debug);
 
     // Starts the game
     void runGame();
