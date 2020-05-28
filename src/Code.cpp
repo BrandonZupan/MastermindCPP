@@ -4,6 +4,8 @@
 #include "Code.h"
 #include <iostream>
 
+#include "Config.h"
+
 Code::Code() : Code("BBBB") {} ;
 
 Code::Code(std::string code) {

@@ -8,8 +8,6 @@
 #include "Code.h"
 #include "Guess.h"
 
-#define BOARD_SIZE 12
-
 
 class Game {
 

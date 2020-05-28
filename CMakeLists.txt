@@ -3,4 +3,4 @@ project(MasterMind)
 
 file(GLOB SOURCES "src/*.cpp")
 
-add_executable(MasterMind ${SOURCES})
+add_executable(MasterMind ${SOURCES} src/Config.h)
