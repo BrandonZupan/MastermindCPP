@@ -34,3 +34,7 @@ Mastermind
 
 # Vim
 *.swp
+
+# Clion
+.idea/
+cmake-build-debug/
