@@ -36,3 +36,16 @@ bool Code::isValidCode(std::string code) {
     }
     return true;
 }
+
+std::string Code::generateRandomCode() {
+    // need a way to bring the colors into scope, not sure what the best way is
+    char colors[6] = { 'B', 'G', 'O', 'P', 'R', 'Y' };
+
+    // call rand() to pick a random letter from the list of available ones
+    std::string code = "";
+    for (int i = 0; i < CODE_LENGTH; i++) {
+        code += colors[rand() % sizeof(colors)];
+    }
+
+    return code;
+}

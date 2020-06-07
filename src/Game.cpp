@@ -12,7 +12,11 @@
 Game::Game() : Game(false) {} ;
 
 Game::Game(bool debug) {
-    this->secretCode = Code("BGOP");
+    // this->secretCode = Code("BGOP");
+    std::string codeStr;
+    codeStr = Code::generateRandomCode();
+    this->secretCode = Code(codeStr);
+
     if (debug) {
         std::cout << "Secret code: " + secretCode.toString() << std::endl;
     }

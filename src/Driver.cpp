@@ -3,6 +3,7 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <ctime>
 
 #include "Game.h"
 #include "Code.h"
@@ -12,6 +13,9 @@
 void testCodeCreation();
 
 int main(int argc, char *argv[]) {
+    // init random number generator
+    srand((unsigned) time(0));
+
     std::cout << "Welcome to Mastermind." << std::endl; 
     
     Game game = Game(true);

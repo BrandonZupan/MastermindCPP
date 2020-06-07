@@ -32,6 +32,9 @@ public:
     std::string toString() const{
         return code;
     }
+
+    // Generates a random code
+    static std::string generateRandomCode();
     
 //    const char* getColorsPointer() const{ return &COLORS; }
 };
