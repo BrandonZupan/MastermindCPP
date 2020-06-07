@@ -38,3 +38,7 @@ Mastermind
 # Clion
 .idea/
 cmake-build-debug/
+
+# Visual Studio
+/out
+/.vs
